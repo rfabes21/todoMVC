@@ -1,4 +1,4 @@
-# Marionette HTML Application Foundation
+# Marionette HTML Application Todo MVC
 
 ## Features
 
@@ -29,3 +29,4 @@ sudo npm install -g requirejs
 ```
 make all
 ```
+

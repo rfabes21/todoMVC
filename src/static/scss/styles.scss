@@ -1,0 +1,35 @@
+body {
+    background-color: slategray;
+    color: white;
+    font-family: Helvetica;
+    text-align: center;
+
+    input {
+        width: 300px;
+    }
+
+    footer {
+        border-top: 1px solid gray;
+        width: 500px;
+        margin: 0 auto;
+
+        span {
+            width: 100px;
+        }
+
+        ul {
+            list-style-type: none;
+            display: inline-block;
+
+            li {
+                display: inline-block;
+
+                a {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+
