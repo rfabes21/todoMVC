@@ -13,7 +13,6 @@ var HeaderView = marionette.ItemView.extend({
         'keypress .new-todo': 'onInputKeypress'
     },
     initialize : function(){
-        debugger;
     },
 
     // TODO* change to built version
@@ -22,7 +21,7 @@ var HeaderView = marionette.ItemView.extend({
       var todoText = this.ui.input.val().trim();
 
       if ( evt.which === ENTER_KEY && todoText ) {
-        this.collection.create({
+        todolist.create({
           title : todoText
         });
         this.ui.input.val('');

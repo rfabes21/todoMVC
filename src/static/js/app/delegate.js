@@ -9,6 +9,7 @@ var keys = require('built/app/keys');
 var app = require('app/app');
 
 var TodoCollection = require('app/todo-list-collection').TodoCollection;
+var TodoListView = require('app/views/todo-list').TodoListView;
 var Header = require('app/views/header').HeaderView;
 var Footer = require('app/views/footer').FooterView;
 var Todo = require('app/models/todo').Todo;
@@ -44,13 +45,19 @@ var AppDelegate = marionette.Controller.extend({
     SETUP: function(){
         todolist = new TodoCollection();
 
+        var viewOptions = {
+            collection: todolist
+        };
+
         this.header = new Header({
             app: app
-        }).render();
+        }).render(viewOptions);
 
         this.footer = new Footer({
             app: app
-        }).render();
+        }).render(viewOptions);
+
+        // todolist.fetch();
     },
 
     // Demo of handling Key Presses
