@@ -4,14 +4,18 @@ var backbone = require('backbone');
 
 var Todo = backbone.Model.extend({
     defaults: {
-        title: '',
-        completed: false,
-        created: 0
+        label: '',
+        completed: false
     },
 
     initialize: function(){
 
     },
+
+    toggle: function(){
+        return this.set('completed', !this.get('completed'));
+    },
+
 });
 
 exports.Todo = Todo;

@@ -7,12 +7,7 @@ var modals = require('built/app/modals');
 var activity = require('built/app/activity');
 var keys = require('built/app/keys');
 var app = require('app/app');
-
-var TodoCollection = require('app/todo-list-collection').TodoCollection;
-var TodoListView = require('app/views/todo-list').TodoListView;
-var Header = require('app/views/header').HeaderView;
-var Footer = require('app/views/footer').FooterView;
-var Todo = require('app/models/todo').Todo;
+var TodoLayout = require('app/todo/views/todo-layout').TodoLayout;
 
 
 var AppDelegate = marionette.Controller.extend({
@@ -23,41 +18,15 @@ var AppDelegate = marionette.Controller.extend({
         // You can customize that as necessary.
         this.BUILT();
         this.app = app;
-        this.SETUP();
+        this.app.todo.show(new TodoLayout());
     },
 
     index: function(){
 
-
-        /* Ready. Set. Go! */
-        // Your Application's Regions are set in the app/app.js
-        // everything else starts here. (or in another route :)
-
-        // var model = new Model({
-        //     message: 'Build something! Press Shift + M to display a Modal'
-        // });
-
-        // this.app.window.show(new MySampleView({model: model}));
-        /* ---------- */
-
     },
 
-    SETUP: function(){
-        todolist = new TodoCollection();
-
-        var viewOptions = {
-            collection: todolist
-        };
-
-        this.header = new Header({
-            app: app
-        }).render(viewOptions);
-
-        this.footer = new Footer({
-            app: app
-        }).render(viewOptions);
-
-        // todolist.fetch();
+    filter: function(type){
+        console.log('called');
     },
 
     // Demo of handling Key Presses

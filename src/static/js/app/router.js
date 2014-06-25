@@ -6,7 +6,8 @@ var AppDelegate = require('app/delegate').AppDelegate;
 var AppRouter  =  marionette.AppRouter.extend({
     controller: new AppDelegate(),
     appRoutes:{
-        '*index':'index',
+        ':filter': 'filter',
+        '*index':'index'
     }
 });
 

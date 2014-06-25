@@ -40,6 +40,11 @@ require.config({
         },
 
         {
+            location: 'vendor/backbone',
+            name: 'localStorage',
+        },
+
+        {
             location: 'vendor/built',
             name: 'built'
         }
@@ -76,6 +81,11 @@ require.config({
     'backbone/stickit' : {
       'deps' : ['backbone'],
       'exports' : 'Stickit'
+    },
+
+    'backbone/localStorage' : {
+        'deps' : ['backbone'],
+        'exports' : 'localStorage'
     },
 
     'jquery/mockjax': {
