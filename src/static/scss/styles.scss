@@ -10,7 +10,9 @@ body {
     }
 
     footer {
-        border-top: 1px solid #808080;
+        border-top: 1px solid #7a5757;
+        padding-top: 10px;
+        margin-top: 20px;
         width: 500px;
         margin: 0 auto;
         display: none;
@@ -54,4 +56,42 @@ body {
         height: 100%;
     }
 }
+
+.todo {
+
+    .all {
+
+        .active-item {
+            display: block;
+        }
+
+        .complete-item {
+            display: block;
+        }
+    }
+
+    .active {
+
+        .active-item {
+            display: block;
+        }
+
+        .complete-item {
+            display: none;
+        }
+    }
+
+    .completed {
+
+        .active-item {
+            display: none;
+        }
+
+        .complete-item {
+            display: block;
+        }
+    }
+}
+
+
 

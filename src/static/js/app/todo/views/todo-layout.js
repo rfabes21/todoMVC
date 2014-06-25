@@ -27,7 +27,12 @@ var TodoLayout = marionette.Layout.extend({
         this.footer.show(new FooterView({
             collection:this.collection
         }));
-    }
+
+    },
+
+    setFilter: function(filter){
+        this.$el.attr('class', filter);
+    },
 });
 
 exports.TodoLayout = TodoLayout;

@@ -32,8 +32,8 @@ var FooterView = marionette.ItemView.extend({
 
     wantsFilterList: function(e){
         e.preventDefault();
-        var $target = (e.currentTarget);
-        var filterName = $target.href;
+        var $target = $(e.currentTarget);
+        var filterName = $target.attr('href');
         backbone.history.navigate(filterName, true);
     },
 

@@ -25,11 +25,11 @@ var ListViewCell = marionette.ItemView.extend({
     },
 
     checkActiveComplete: function(){
-        this.$el.removeClass('active completed');
-        if (this.model.get('completed')) {
-            this.$el.addClass('completed');
+        this.$el.removeClass('active-item completed-item');
+        if (this.model.get('completed-item')) {
+            this.$el.addClass('completed-item');
         } else {
-            this.$el.addClass('active');
+            this.$el.addClass('active-item');
         }
     },
 

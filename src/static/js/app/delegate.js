@@ -18,16 +18,18 @@ var AppDelegate = marionette.Controller.extend({
         // You can customize that as necessary.
         this.BUILT();
         this.app = app;
-        this.app.todo.show(new TodoLayout());
+        this.todo = new TodoLayout();
+        this.app.todo.show(this.todo);
     },
 
     index: function(){
-
+        this.todo.setFilter('index');
     },
 
     filter: function(type){
-        console.log('called');
+        this.todo.setFilter(type);
     },
+
 
     // Demo of handling Key Presses
     // Combined with Modal Handling
