@@ -3,7 +3,6 @@ define(function (require, exports, module) {
 var marionette   = require('marionette');
 var InputSelect  = require('built/ui/controls/input-select').InputSelectMarionette;
 var helpers      = require('built/core/utils/helpers');
-var Scroller     = require('built/core/controls/page/scroller').Scroller;
 var focus        = require('built/core/events/focus');
 var data         = require('built/core/events/data');
 var events       = require('built/core/events/event');
@@ -12,7 +11,7 @@ var InputSelectComposite =  marionette.CompositeView.extend({
     minLength: 2,
     debounceDelay: 300,
     acceptsMouseEnterExit:true,
-    
+
     initialize : function(options){
          this.options = options;
     },

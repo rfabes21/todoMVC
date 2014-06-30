@@ -38,7 +38,7 @@ var ListViewCell = marionette.ItemView.extend({
     },
 
     wantsToggleModel: function(){
-        this.model.toggle().save();
+        this.model.toggleCompleted().save();
     },
 
     wantsEditLabel: function(){

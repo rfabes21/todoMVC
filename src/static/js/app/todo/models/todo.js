@@ -12,7 +12,7 @@ var Todo = backbone.Model.extend({
 
     },
 
-    toggle: function(){
+    toggleCompleted: function(){
         return this.set('completed', !this.get('completed'));
     },
 

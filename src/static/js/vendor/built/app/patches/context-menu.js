@@ -3,7 +3,6 @@ define(function (require, exports, module) {
     var marionette = require('marionette');
     var PopView = require('built/app/popovers').PopView;
     var WindowResponder = require('built/core/responders/window').WindowResponder;
-    var ScrollResponder = require('built/core/responders/scroll').ScrollResponder;
 
     _.extend(marionette.View.prototype, {
 

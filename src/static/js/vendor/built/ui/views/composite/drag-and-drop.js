@@ -16,19 +16,20 @@ var DragAndDropCompositeView = marionette.CompositeView.extend({
 });
 
 mixins(DragAndDropCollectionView, DragAndDropCompositeView,
-    'onShow',
-    'onClose',
-    'getViewForEl',
     '_onRender',
-    'getDragImage',
-    'renderPlaceholderForData',
-    'getViewForId',
-    'getDragDataForElement',
-    'serializeModel',
+    'appendHtml',
     'deserializeModel',
     'dropResponderPerformDragOperation',
     'draggingEndedRestoreElementAtPosition',
-    'appendHtml');
+    'getViewForEl',
+    'getViewForId',
+    'getDragDataForElement',
+    'getDragImage',
+    'onClose',
+    'onShow',
+    'removeChildView',
+    'renderPlaceholderForData',
+    'serializeModel');
 
 exports.DragAndDropCompositeView = DragAndDropCompositeView;
 

@@ -377,7 +377,7 @@ define(function(require, exports, module){
             if(responder.clickCount() > 0){
                 // keep the input focused
                 this.$el.focus();
-                this.wantsSelect(e.target);
+                this.wantsSelect(e.currentTarget);
             }
         },
 
